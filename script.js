@@ -49,6 +49,7 @@ const questions = [
     },
     {
         question: "A child's crying draws you to an alley. You find them with:",
+        image: "./img/scene4.jpg",
         answers: {
             A: "A book of spells they can't read",
             B: "A lost guard's badge",
@@ -64,6 +65,7 @@ const questions = [
     },
     {
         question: "The town bell rings for danger. You feel drawn to:",
+        image: "./img/scene5.jpg",
         answers: {
             A: "The library archives",
             B: "The town's defense walls",
@@ -79,6 +81,7 @@ const questions = [
     },
     {
         question: "A mysterious dream shows you holding:",
+        image: "./img/scene6.jpg",
         answers: {
             A: "An ancient tome of knowledge",
             B: "A legendary sword of leadership",
