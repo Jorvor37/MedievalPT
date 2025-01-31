@@ -97,6 +97,7 @@ const questions = [
     },
     {
         question: "Your body bears a strange mark that looks like:",
+        image: "./img/scene7.jpg",
         answers: {
             A: "Flowing script in an ancient language",
             B: "A noble house's crest",
@@ -112,6 +113,7 @@ const questions = [
     },
     {
         question: "In the town square, you're drawn to the sound of:",
+        image: "./img/scene8.jpg",
         answers: {
             A: "Old tales being told",
             B: "A call for justice",
@@ -222,13 +224,22 @@ function loadQuestion(index) {
 function displayResults() {
     const container = document.getElementById('story-container');
     container.innerHTML = '<h2>Your Results</h2>';
+    
     const roles = calculateRole(userAnswers);
     roles.forEach(role => {
         const roleElement = document.createElement('div');
         roleElement.textContent = `${role}: ${roleDescriptions[role]}`;
         container.appendChild(roleElement);
     });
+
+    // Check if the user got "Scholarly Monk"
+    if (roles.includes("Scholarly Monk")) {
+        document.body.style.backgroundImage = "url('./img/Scholarly-Monk.jpg')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+    }
 }
+
 
 document.getElementById('start-quiz').addEventListener('click', () => {
     document.getElementById('intro-story').style.display = 'none';
